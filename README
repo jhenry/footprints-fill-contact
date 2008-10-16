@@ -4,4 +4,4 @@ This Greasemonkey/Userscript parses the submitted email address to grab the NetI
 
 ## Credit
 
-Thanks to Ben Nadel / Kinky Solutions for the [nifty little parsing function](http://www.bennadel.com/index.cfm?dax=blog:207.view "Ask Ben: Extracting Parts Of An Email Address In Javascript : Kinky Solutions : A Student's Perspective by Ben Nadel").  
+Thanks to Ben Nadel / Kinky Solutions for the nifty little parsing function:  http://www.bennadel.com/index.cfm?dax=blog:207.view

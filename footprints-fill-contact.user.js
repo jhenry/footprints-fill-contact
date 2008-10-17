@@ -14,8 +14,8 @@ if (email_address.user.length <= 8 && email_address.domain == "uvm" && email_add
 
 	document.getElementById("userfield4").value = email_address.user
 	document.getElementById("userfield8").value = "";
-	
-	absearch();
+	var extraURL = "";
+	absearch(extraURL);
 
 
 }
@@ -23,7 +23,23 @@ if (email_address.user.length <= 8 && email_address.domain == "uvm" && email_add
 
 function absearch(extraURL)
 {
-window.open('/MRcgi/MRABregsearch_page.pl?USER=jhenry&PROJECTID=60&MRP=6PKqLznDwk&ABMASTER=1&PID=29054&THEREGISTERPAGE=1' + extraURL, 'absearch','top=200,left=200,width=670,height=450,toolbar=no,directories=no,menubar=no,scrollbars=yes,resizable=yes');
+
+window.open('/MRcgi/MRABregsearch_page.pl?USER=' + gup("USER") + '&PROJECTID=' + gup("PROJECTID") + '&MRP=' + gup("MRP") + '&ABMASTER=1&PID=' + gup("LASTID") + '&THEREGISTERPAGE=1' + extraURL, 'absearch','top=200,left=200,width=670,height=450,toolbar=no,directories=no,menubar=no,scrollbars=yes,resizable=yes');
+    
+}
+
+// Get URL Parameters
+// http://www.netlobo.com/url_query_string_javascript.html
+function gup( name )
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
 }
 
 // Function: GetEmailParts
